@@ -12,8 +12,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   var app = document.querySelector('#app');
 
-  app.baseUrl = '/';
-
   window.addEventListener('WebComponentsReady', function() {
     // imports are loaded and elements have been registered
   });

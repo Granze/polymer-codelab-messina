@@ -22,7 +22,20 @@
         </app-toolbar>
       </app-header>
       <paper-material>
-
+        <table class="users">
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Company</th>
+          </tr>
+          <template is="dom-repeat" items="[[data]]" as="u">
+            <tr>
+              <td>[[u.name]]</td>
+              <td>[[u.surname]]</td>
+              <td>[[u.company]]</td>
+            </tr>
+          </template>
+        </table>
       </paper-material>
     </template>
 

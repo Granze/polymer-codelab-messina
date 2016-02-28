@@ -12,3 +12,19 @@ body {
   font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }
+
+.users {
+  width: 100%;
+  padding: 20px;
+}
+
+.users th {
+  padding: 10px 0 10px 4px;
+  text-align: left;
+  background-color: #e0d7d1;
+}
+
+.users td {
+  padding-left: 4px;
+  border-bottom: 1px solid #e0d7d1;
+}

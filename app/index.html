@@ -12,6 +12,8 @@
 
   <body unresolved>
     <template is="dom-bind" id="app">
+      <iron-ajax url="api/users.json" last-response="{{data}}" auto></iron-ajax>
+
       <app-header shadow>
         <app-toolbar>
           <a href="/">
@@ -20,7 +22,7 @@
         </app-toolbar>
       </app-header>
       <paper-material>
-        <h1>Hello Messina!</h1>
+
       </paper-material>
     </template>
 

@@ -4,6 +4,10 @@
 
 A minimal app based on [Polymer Starter Kit Light](https://developers.google.com/web/tools/polymer-starter-kit/)!
 
+## How to get started
+
+[Download this zip](https://github.com/Granze/polymer-codelab-messina/archive/start.zip) and open the contained project into the editor of your choice.
+
 ## Firing up a server using Python
 
 Fire up a local server from inside the `app` directory.

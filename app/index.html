@@ -12,7 +12,16 @@
 
   <body unresolved>
     <template is="dom-bind" id="app">
-      <h1>Hello Messina!</h1>
+      <app-header shadow>
+        <app-toolbar>
+          <a href="/">
+            <h3>Best app ever</h3>
+          </a>
+        </app-toolbar>
+      </app-header>
+      <paper-material>
+        <h1>Hello Messina!</h1>
+      </paper-material>
     </template>
 
     <script src="scripts/app.js"></script>

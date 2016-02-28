@@ -26,13 +26,16 @@
           <tr>
             <th>Name</th>
             <th>Surname</th>
-            <th>Company</th>
+            <th colspan="2">Company</th>
           </tr>
           <template is="dom-repeat" items="[[data]]" as="u">
-            <tr>
+            <tr id="user[[u.id]]">
               <td>[[u.name]]</td>
               <td>[[u.surname]]</td>
               <td>[[u.company]]</td>
+              <td>
+                <a href="user/[[u.id]]">details</a>
+              </td>
             </tr>
           </template>
         </table>

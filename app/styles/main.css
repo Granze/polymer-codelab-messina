@@ -18,6 +18,10 @@ body {
   padding: 20px;
 }
 
+.users tr:hover {
+  background-color: #f3f2f4;
+}
+
 .users th {
   padding: 10px 0 10px 4px;
   text-align: left;
@@ -25,6 +29,6 @@ body {
 }
 
 .users td {
-  padding-left: 4px;
+  padding: 4px;
   border-bottom: 1px solid #e0d7d1;
 }

@@ -21,25 +21,31 @@
           </a>
         </app-toolbar>
       </app-header>
-      <paper-material>
-        <table class="users">
-          <tr>
-            <th>Name</th>
-            <th>Surname</th>
-            <th colspan="2">Company</th>
-          </tr>
-          <template is="dom-repeat" items="[[data]]" as="u">
-            <tr id="user[[u.id]]">
-              <td>[[u.name]]</td>
-              <td>[[u.surname]]</td>
-              <td>[[u.company]]</td>
-              <td>
-                <a href="user/[[u.id]]">details</a>
-              </td>
-            </tr>
-          </template>
-        </table>
-      </paper-material>
+      <iron-pages attr-for-selected="data-route" selected="{{route}}">
+
+        <section data-route="home">
+          <paper-material>
+            <table class="users">
+              <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Company</th>
+              </tr>
+              <template is="dom-repeat" items="[[data]]" as="u">
+                <tr id="[[u.id]]" on-tap="viewDetail">
+                  <td>[[u.name]]</td>
+                  <td>[[u.surname]]</td>
+                  <td>[[u.company]]</td>
+                </tr>
+              </template>
+            </table>
+          </paper-material>
+        </section>
+
+        <section data-route="user">
+          <p>user details [[params.id]]</p>
+        </section>
+      </iron-pages>
     </template>
 
     <script src="scripts/app.js"></script>

@@ -12,6 +12,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
   var app = document.querySelector('#app');
 
+  app.viewDetail = function(event) {
+    page('/user/' + event.target.parentElement.id);
+  };
+
   window.addEventListener('WebComponentsReady', function() {
     // imports are loaded and elements have been registered
   });

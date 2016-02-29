@@ -19,13 +19,13 @@ body {
 }
 
 .users tr:hover {
+  cursor: pointer;
   background-color: #f3f2f4;
 }
 
 .users th {
   padding: 10px 0 10px 4px;
   text-align: left;
-  background-color: #e0d7d1;
 }
 
 .users td {

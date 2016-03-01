@@ -21,7 +21,7 @@
           </a>
         </app-toolbar>
       </app-header>
-      <iron-pages attr-for-selected="data-route" selected="{{route}}">
+      <iron-pages attr-for-selected="data-route" selected="[[route]]">
 
         <section data-route="home">
           <paper-material>
@@ -43,7 +43,7 @@
         </section>
 
         <section data-route="user">
-          <p>user details [[params.id]]</p>
+          <user-detail users="[[data]]" user-id="[[params.id]]"></user-detail>
         </section>
       </iron-pages>
     </template>

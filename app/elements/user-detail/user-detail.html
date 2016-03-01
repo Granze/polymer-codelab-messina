@@ -1,0 +1,41 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<dom-module id="user-detail">
+  <template>
+    <style>
+      :host {
+        display: inline-block;
+      }
+    </style>
+    <h1>[[userDetail.name]] [[userDetail.surname]]</h1>
+    <h2>[[userDetail.company]]</h2>
+    <p>email: [[userDetail.email]]</p>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'user-detail',
+
+        properties: {
+          users: {
+            type: Object,
+            value: function() { return {}; }
+          },
+          userId: {
+            type: Number
+          },
+          userDetail: {
+            type: Object,
+            computed: '_getUserDetail(users, userId)'
+          }
+        },
+        _getUserDetail: function(users, userId) {
+          return users[userId];
+        }
+      });
+    })();
+  </script>
+</dom-module>

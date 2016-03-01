@@ -4,12 +4,21 @@
   <template>
     <style>
       :host {
-        display: inline-block;
+        display: block;
+      }
+      paper-material {
+        width: 500px;
+        margin: 100px auto;
+        padding: 40px;
       }
     </style>
-    <h1>[[userDetail.name]] [[userDetail.surname]]</h1>
-    <h2>[[userDetail.company]]</h2>
-    <p>email: [[userDetail.email]]</p>
+    <paper-material>
+      <h1>[[userDetail.name]] [[userDetail.surname]]</h1>
+      <h2>[[userDetail.company]]</h2>
+      <p><strong>email:</strong> [[userDetail.email]]</p>
+      <p><strong>birthdate:</strong> [[userDetail.birthdate]]</p>
+    </paper-material>
+
   </template>
 
   <script>
@@ -32,6 +41,7 @@
             computed: '_getUserDetail(users, userId)'
           }
         },
+
         _getUserDetail: function(users, userId) {
           return users[userId];
         }

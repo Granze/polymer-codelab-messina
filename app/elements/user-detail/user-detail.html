@@ -1,5 +1,6 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
 <link rel="import" href="../../elements/time-format/time-format.html">
+<link rel="import" href="../../elements/user-avatar/user-avatar.html">
 
 <dom-module id="user-detail">
   <template>
@@ -8,16 +9,31 @@
         display: block;
       }
       paper-material {
+        display: flex;
         width: 500px;
         margin: 100px auto;
         padding: 40px;
       }
+      .avatar {
+        padding-right: 40px;
+        align-self: center;
+      }
+      .info {
+        flex: 1;
+      }
     </style>
     <paper-material>
-      <h1>[[userDetail.name]] [[userDetail.surname]]</h1>
-      <h2>[[userDetail.company]]</h2>
-      <p><strong>email:</strong> [[userDetail.email]]</p>
-      <p><strong>birthdate:</strong> <time is="time-format" datetime="[[userDetail.birthdate]]"></time></p>
+      <div class="avatar">
+        <user-avatar user-name="[[userDetail.name]]"></user-avatar>
+      </div>
+      <div class="info">
+        <h1>[[userDetail.name]] [[userDetail.surname]]</h1>
+        <h3>[[userDetail.company]]</h3>
+        <p><strong>email:</strong> [[userDetail.email]]</p>
+        <p><strong>birthdate:</strong>
+          <time is="time-format" datetime="[[userDetail.birthdate]]"></time>
+        </p>
+      </div>
     </paper-material>
 
   </template>

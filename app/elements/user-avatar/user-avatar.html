@@ -4,7 +4,17 @@
   <template>
     <style>
       :host {
-        display: inline-block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 100px;
+        color: #333;
+        background-color: #cfcfcf;
       }
     </style>
   </template>
@@ -17,8 +27,16 @@
         is: 'user-avatar',
 
         properties: {
+          userName: {
+            type: String,
+            observer: '_updateName'
+          }
+        },
 
+        _updateName: function() {
+          Polymer.dom(this.root).innerHTML = this.userName.charAt(0);
         }
+
       });
     })();
   </script>

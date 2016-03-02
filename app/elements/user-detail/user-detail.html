@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../../elements/time-format/time-format.html">
 
 <dom-module id="user-detail">
   <template>
@@ -16,7 +17,7 @@
       <h1>[[userDetail.name]] [[userDetail.surname]]</h1>
       <h2>[[userDetail.company]]</h2>
       <p><strong>email:</strong> [[userDetail.email]]</p>
-      <p><strong>birthdate:</strong> [[userDetail.birthdate]]</p>
+      <p><strong>birthdate:</strong> <time is="time-format" datetime="[[userDetail.birthdate]]"></time></p>
     </paper-material>
 
   </template>

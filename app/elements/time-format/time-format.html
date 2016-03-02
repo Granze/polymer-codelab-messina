@@ -16,10 +16,21 @@
       Polymer({
         is: 'time-format',
         extends: 'time',
-
         properties: {
+          datetime: {
+            type: String,
+            observer: '_updateDate'
+          }
+        },
 
+        _updateDate: function() {
+          var date = new Date(this.datetime);
+          var day = ('0' + date.getDate()).slice(-2);
+          var month = ('0' + (date.getMonth()+1)).slice(-2);
+          var year = date.getFullYear();
+          Polymer.dom(this.root).innerHTML = day + '/' + month + '/' + year;
         }
+
       });
     })();
   </script>

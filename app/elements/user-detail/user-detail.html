@@ -21,8 +21,18 @@
       .info {
         flex: 1;
       }
+      .back {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        display: block;
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+      }
     </style>
     <paper-material>
+      <a class="back" href="/">&lt; back</a>
       <div class="avatar">
         <user-avatar user-name="[[userDetail.name]]"></user-avatar>
       </div>

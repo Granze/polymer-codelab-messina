@@ -1,4 +1,5 @@
 <link rel="import" href="../../bower_components/polymer/polymer.html">
+<link rel="import" href="../libs/color-hash-import.html">
 
 <dom-module id="user-avatar">
   <template>
@@ -34,7 +35,13 @@
         },
 
         _updateName: function() {
-          Polymer.dom(this.root).innerHTML = this.userName.charAt(0);
+          var char = this.userName.charAt(0);
+          this.innerHTML = char;
+          this.style.backgroundColor = this.colorHash.hex(char);
+        },
+
+        attached: function() {
+          this.colorHash = new ColorHash();
         }
 
       });
